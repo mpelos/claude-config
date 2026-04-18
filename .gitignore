@@ -1,0 +1,52 @@
+# Allowlist strategy: ignore everything, then whitelist what we want to version.
+# This prevents accidentally leaking transcripts, tokens, or caches.
+
+*
+
+# --- Allowed: structural ---
+!.gitignore
+!.superclaude-metadata.json
+
+# --- Allowed: instructions & framework docs ---
+!CLAUDE.md
+!COMMANDS.md
+!FLAGS.md
+!MCP.md
+!MODES.md
+!ORCHESTRATOR.md
+!PERSONAS.md
+!PRINCIPLES.md
+!RULES.md
+
+# --- Allowed: user-owned config ---
+!settings.json
+!keybindings.json
+!statusline-command.sh
+
+# --- Allowed: customization directories (recursive) ---
+!commands/
+!commands/**
+!agents/
+!agents/**
+!skills/
+!skills/**
+!hooks/
+!hooks/**
+!output-styles/
+!output-styles/**
+!plugins/
+!plugins/config.json
+!plugins/installed_plugins.json
+!plugins/known_marketplaces.json
+
+# --- Hard-ignore sensitive / local-only even if re-included above ---
+settings.local.json
+.claude.json
+**/.DS_Store
+**/*.log
+**/*.backup.*
+**/.env
+**/.env.*
+**/credentials*
+**/*token*
+**/*secret*
