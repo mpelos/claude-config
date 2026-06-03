@@ -2,9 +2,20 @@
 input=$(cat)
 model=$(echo "$input" | jq -r '.model.display_name // "Unknown"')
 used=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
+effort=$(echo "$input" | jq -r '.effort.level // empty')
+
+if [ -n "$effort" ]; then
+  effort_str="${effort} · "
+else
+  effort_str=""
+fi
 
 if [ -z "$used" ]; then
-  printf "%s" "$model"
+  if [ -n "$effort" ]; then
+    printf "%s %s" "$model" "$effort"
+  else
+    printf "%s" "$model"
+  fi
 else
   pct=$(printf "%.0f" "$used")
   filled=$(( pct / 10 ))
@@ -50,8 +61,8 @@ else
   fi
 
   if [ -n "$token_str" ]; then
-    printf "%s [%s] %s" "$model" "$bar" "$token_str"
+    printf "%s %s[%s] %s" "$model" "$effort_str" "$bar" "$token_str"
   else
-    printf "%s [%s]" "$model" "$bar"
+    printf "%s %s[%s]" "$model" "$effort_str" "$bar"
   fi
 fi

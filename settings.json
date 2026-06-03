@@ -19,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/mpelos/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
+            "command": "$HOME/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
           }
         ]
       }
@@ -30,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/mpelos/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
+            "command": "$HOME/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
           }
         ]
       },
@@ -39,7 +39,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/mpelos/.claude/hooks/block-git-push.sh"
+            "command": "$HOME/.claude/hooks/block-git-push.sh"
           }
         ]
       }
@@ -47,7 +47,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash /Users/mpelos/.claude/statusline-command.sh"
+    "command": "bash $HOME/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
     "pyright-lsp@claude-plugins-official": true,
