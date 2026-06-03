@@ -5,6 +5,15 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/mpelos/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-04-18T17:04:33.734Z"
+    "lastUpdated": "2026-05-25T23:31:03.651Z"
+  },
+  "thedotmack": {
+    "source": {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    },
+    "installLocation": "/Users/mpelos/.claude/plugins/marketplaces/thedotmack",
+    "lastUpdated": "2026-05-25T23:31:03.420Z",
+    "autoUpdate": true
   }
 }

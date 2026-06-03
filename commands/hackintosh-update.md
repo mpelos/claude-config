@@ -89,37 +89,64 @@ Use WebSearch and WebFetch to check GitHub releases for ALL components listed ab
 - Agent 3: macOS updates (`softwareupdate --list`)
 
 ### Phase 3: macOS Update Compatibility Research
-For EVERY macOS update listed by `softwareupdate --list`, research online whether it is safe for Hackintosh:
 
-**Launch a dedicated Agent** to research each available macOS update (security updates AND major versions). The agent must:
+**🚨 REGRA INEGOCIÁVEL: NUNCA retorne veredicto "LIKELY SAFE" ou qualquer veredicto inconclusivo.**
 
-1. **WebSearch** for Hackintosh compatibility reports:
-   - `"macOS {version}" hackintosh {current GPU architecture} site:reddit.com/r/hackintosh`
-   - `"macOS {version}" hackintosh OpenCore {current OC version}`
-   - `"macOS {version}" hackintosh issues problems`
-   - `"macOS {version}" {GPU model} hackintosh` (e.g., "macOS 15.7.5 RX 580 hackintosh")
+Atualizar macOS num Hackintosh é uma operação de risco alto e irreversível sem rollback simples. Um update aparentemente "menor" pode quebrar GPU, Wi-Fi, BT, áudio ou tornar o sistema não-bootável. Por isso o veredicto precisa ser baseado em **evidência concreta**, não em ausência de relatos negativos.
 
-2. **Check Dortania/OpenCore compatibility**:
-   - WebFetch `https://dortania.github.io/hackintosh/` or search for Dortania guides mentioning the version
-   - Check if OpenCore release notes mention the macOS version
+For EVERY macOS update listed by `softwareupdate --list`, research **EXAUSTIVAMENTE** whether it is safe for Hackintosh:
 
-3. **Check for known regressions**:
-   - Search for kernel panics, boot loops, or hardware-specific issues
-   - Check if any kexts in our setup are known to break with this version
-   - Pay special attention to: WhateverGreen (GPU), itlwm (Wi-Fi), AppleALC (audio)
+**Launch a dedicated Agent** to research each available macOS update (security updates AND major versions). The agent prompt MUST be explicit about: "não me retorne 'likely safe' — preciso de evidência concreta de Hackintosh com hardware similar rodando essa versão sem issues, OU evidência concreta de problemas".
 
-4. **For major macOS upgrades** (e.g., Sequoia to Tahoe):
-   - Check memory file for existing upgrade guide and requirements
-   - Verify ALL required kexts are available and compatible
-   - Check if KDK or other special components are needed
-   - Research community success/failure reports extensively
+The agent must search EXHAUSTIVELY across multiple sources:
 
-5. **Produce a verdict per update**:
-   - **SAFE**: Community reports confirm it works, no known issues for our hardware
-   - **LIKELY SAFE**: Few reports but no red flags, minor update (security patch)
-   - **CAUTION**: Mixed reports or insufficient data, recommend waiting
-   - **BLOCK**: Known issues with our hardware, or required kexts not yet compatible
-   - Include sources/links for the verdict
+1. **GitHub Hackintosh repos públicos** (evidência mais forte):
+   - WebSearch: `site:github.com hackintosh "macOS {version}" OR "{build}"`
+   - Procurar configs públicos com hardware similar (mesma família de GPU, mesmo OC version, kexts similares)
+   - **Se encontrar config quase-idêntico rodando a versão alvo → SAFE com alta confiança**
+
+2. **Reddit r/hackintosh**:
+   - WebSearch: `site:reddit.com/r/hackintosh "macOS {version}"` 
+   - WebSearch: `site:reddit.com/r/hackintosh "{build}"` (ex: "24G624")
+   - WebFetch nos posts encontrados para ler comentários
+   - Procurar: kernel panic, boot loop, GPU/Wi-Fi/BT/USB broken após update
+
+3. **Forums tradicionais**:
+   - InsanelyMac: `site:insanelymac.com "macOS {version}"`
+   - TonyMacx86: `site:tonymacx86.com "macOS {version}"`
+   - EliteMacx86: `site:elitemacx86.com "macOS {version}"`
+
+4. **GitHub issues nos repos relevantes**:
+   - acidanthera/Lilu, WhateverGreen, OpenCorePkg issues abertas mencionando a versão/build
+   - OpenIntelWireless/itlwm, IntelBluetoothFirmware issues
+   - Procurar regressões ativas
+
+5. **Apple security release notes** (https://support.apple.com/en-us/{KB}):
+   - Listar quais componentes/CVEs foram modificados
+   - Verificar se algum afeta IOKit, AMD drivers, IOSkywalk (Wi-Fi), IOBluetoothFamily, AppleHDA, AppleVTD
+   - **Hardening de memória/race conditions geralmente é seguro; mudanças arquiteturais em kext APIs são red flag**
+
+6. **Cobertura técnica**:
+   - MacRumors, 9to5Mac, EclecticLight, OSXDaily — buscar feedback geral
+   - Verificar se há RC de versão posterior (indica que a Apple já achou bugs)
+
+7. **Para major upgrades** (ex: Sequoia → Tahoe):
+   - Check memory file for existing upgrade guide
+   - Verify ALL required kexts are available and compatible com SDK correto
+   - Check se KDK ou outros componentes especiais são necessários
+   - Pesquisar relatos de sucesso E falha extensivamente
+
+**Produce a verdict per update — APENAS três opções permitidas:**
+
+- **SAFE**: Existe evidência concreta (link verificável) de Hackintosh com hardware similar rodando essa versão sem issues, E nenhum dos componentes modificados pela Apple toca APIs usadas pelos nossos kexts. Cite a fonte de evidência mais forte (idealmente: config público no GitHub com mesma stack de kexts já rodando a versão).
+- **CAUTION**: Faltam relatos suficientes OU há indícios de regressão que afeta nosso hardware OU update muito recente sem cobertura ainda. **Se não existir evidência concreta de SAFE, classifique como CAUTION** — não usar "LIKELY SAFE" como atalho. Recomende esperar X dias e reavaliar.
+- **BLOCK**: Regressão crítica conhecida que afeta nosso hardware (panic, driver quebrado, kext incompatível) OU kexts requeridos ainda não compatíveis (caso típico de major upgrade prematuro).
+
+**Cada veredicto DEVE incluir:**
+- 3+ URLs específicas como evidência (não termos genéricos)
+- Para SAFE: link explícito a config Hackintosh similar rodando a versão alvo
+- Para CAUTION: o que falta saber + sugestão de quando reavaliar
+- Para BLOCK: descrição exata da regressão + workaround se houver
 
 ### Phase 3.5: OpenCore Upgrade Research (MANDATORY if OC update available)
 If a new OpenCore version is available, **ALWAYS launch a dedicated Agent** to research the upgrade thoroughly before proceeding:

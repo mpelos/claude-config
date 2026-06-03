@@ -9,7 +9,8 @@
       "Bash(find:*)",
       "Bash(ls:*)"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "auto"
   },
   "hooks": {
     "PostToolUse": [
@@ -32,22 +33,43 @@
             "command": "/Users/mpelos/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/mpelos/.claude/hooks/block-git-push.sh"
+          }
+        ]
       }
     ]
   },
-  "enabledPlugins": {
-    "pyright-lsp@claude-plugins-official": true,
-    "ruby-lsp@claude-plugins-official": true
-  },
-  "effortLevel": "medium",
-  "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true,
-  "feedbackSurveyState": {
-    "lastShownTime": 1754085137470
-  },
-  "teammateMode": "in-process",
   "statusLine": {
     "type": "command",
     "command": "bash /Users/mpelos/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true,
+    "claude-mem@thedotmack": false
+  },
+  "extraKnownMarketplaces": {
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "autoCompactEnabled": false,
+  "teammateMode": "tmux",
+  "remoteControlAtStartup": false,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1754085137470
   }
 }
