@@ -1,0 +1,32 @@
+skills/handoff
+  s_19e559a12f0555::t_9b14b48329882e 1
+commands/hackintosh-update.md
+  s_8431176d5f99ac::t_f4a7d550c23151 77-79,84-88
+  s_8431176d5f99ac::t_b465f79a0cf6a9 287-288
+  s_8431176d5f99ac::t_5f4091801998d9 289
+  s_8431176d5f99ac::t_099c56f31a65b9 80-83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "731712327403d14afea7645b0cadcaf6e3a2a9b9",
+  "prompts": {},
+  "sessions": {
+    "s_19e559a12f0555": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2487b9c-ca2f-4045-bab6-d6e74d0dac93",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marcelo Pélos <mpelos@gmail.com>"
+    },
+    "s_8431176d5f99ac": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ddb05a60-6caa-4114-9546-b1c93bdec9d2",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marcelo Pélos <mpelos@gmail.com>"
+    }
+  }
+}
