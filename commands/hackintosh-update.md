@@ -74,7 +74,18 @@ All from GitHub releases unless noted:
 ### Phase 1: Read Current State
 1. Read memory file: `/Users/mpelos/.claude/projects/-Users-mpelos/memory/hackintosh.md`
 2. Check current macOS version: `sw_vers`
-3. If user specifies a target version, note it
+3. **🚨 OBRIGATÓRIO: Conferir as versões REAIS dos kexts e do OpenCore montando a EFI. NUNCA confiar apenas na memória.**
+   - O `hackintosh.md` é uma observação point-in-time e PODE estar defasado em relação ao estado real da EFI (edições manuais, restaurações de backup, etc.). A memória é ponto de partida, não fonte de verdade.
+   - Montar a EFI e ler as versões instaladas ANTES de comparar com as releases mais recentes:
+     - **🚨 Claude NÃO consegue montar a EFI sozinho** (requer `sudo`). O fluxo é SEMPRE: (1) listar os discos, (2) identificar a EFI correta, (3) passar o comando de montar para o USUÁRIO executar.
+     - **SEMPRE listar os discos primeiro** — o usuário tem DOIS SSDs (macOS WD SN850X + Windows Kingston) e a ordem deles muda a cada boot. NUNCA reutilizar um identificador de disco de antes; ele provavelmente está errado agora.
+     - `diskutil list | grep -E "EFI|Container"` para identificar a EFI (209 MB do macOS, NÃO a de 105 MB do Windows "NO NAME"). Cruzar o disco da EFI com o APFS Container que contém os volumes do macOS.
+     - Passar ao usuário o comando exato para montar: `sudo diskutil mount diskXs1` (substituir pelo identificador real obtido na listagem) e aguardar ele rodar.
+     - Ler versões reais com o loop do PlistBuddy (ver seção "Comandos Úteis" do hackintosh.md) sobre `/Volumes/EFI/EFI/OC/Kexts/*.kext`
+     - Ler a versão do OpenCore (config.plist / OpenCore.efi) e listar os .efi em `/Volumes/EFI/EFI/OC/Drivers/`
+   - Se as versões reais divergirem da memória, **usar as versões reais da EFI como base** e corrigir o `hackintosh.md` (ver Phase 8).
+   - Só prosseguir para a Phase 2 (pesquisa de releases) com as versões reais em mãos.
+4. If user specifies a target version, note it
 
 ### Phase 2: Research Latest Versions
 Use WebSearch and WebFetch to check GitHub releases for ALL components listed above.
@@ -273,7 +284,9 @@ After successful update, update the memory file with new versions:
 
 ## Safety Rules
 - **ALWAYS backup EFI before any changes**
-- **ALWAYS read memory file first** for current state
+- **ALWAYS read memory file first** for current state — but treat it as a starting point, NOT ground truth
+- **🚨 ALWAYS verify the REAL kext/OpenCore versions on the mounted EFI** — NEVER rely on memory alone. Memory can be stale; the EFI is the source of truth. Mount the EFI and read installed versions before comparing against latest releases (see Phase 1).
+- **🚨 Claude CANNOT mount the EFI itself** (needs sudo) — ALWAYS list disks first (`diskutil list`), identify the correct EFI, then give the user the exact mount command to run. User has TWO SSDs whose order changes every boot, so NEVER reuse a previous disk identifier — always re-list.
 - **NEVER update USBMap.kext** (custom hardware-specific)
 - **NEVER replace SSDT-NVOFF.aml** (custom, created by us)
 - **NEVER suggest macOS Tahoe** unless explicitly asked

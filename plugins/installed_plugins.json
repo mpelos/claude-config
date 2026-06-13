@@ -57,11 +57,11 @@
     "claude-mem@thedotmack": [
       {
         "scope": "user",
-        "installPath": "/Users/mpelos/.claude/plugins/cache/thedotmack/claude-mem/13.4.0",
-        "version": "13.4.0",
+        "installPath": "/Users/mpelos/.claude/plugins/cache/thedotmack/claude-mem/13.6.0",
+        "version": "13.6.0",
         "installedAt": "2026-04-19T13:53:56.802Z",
-        "lastUpdated": "2026-06-03T11:48:57.094Z",
-        "gitCommitSha": "84636894740724cb424e993d2e37a5a06a2aff2e"
+        "lastUpdated": "2026-06-13T13:39:46.216Z",
+        "gitCommitSha": "96ad0e23b4e1a3c976b2f836d2190626b55079f2"
       }
     ]
   }

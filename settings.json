@@ -50,9 +50,9 @@
     "command": "bash $HOME/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
+    "claude-mem@thedotmack": false,
     "pyright-lsp@claude-plugins-official": true,
-    "ruby-lsp@claude-plugins-official": true,
-    "claude-mem@thedotmack": false
+    "ruby-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "thedotmack": {
