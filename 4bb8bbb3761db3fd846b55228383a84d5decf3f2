@@ -1,0 +1,25 @@
+statusline-command.sh
+  s_19e559a12f0555::t_d280731a4b121e 5-7,9-11
+  s_19e559a12f0555::t_c9b3f6347c71ea 64,66
+  s_19e559a12f0555::t_7fddc04f3051bb 8,14-18
+settings.json
+  s_19e559a12f0555::t_6370a83529b129 50
+  s_19e559a12f0555::t_3169b8b3beb704 22,33
+  s_19e559a12f0555::t_23c4dcdebd054c 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "4bb8bbb3761db3fd846b55228383a84d5decf3f2",
+  "prompts": {},
+  "sessions": {
+    "s_19e559a12f0555": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2487b9c-ca2f-4045-bab6-d6e74d0dac93",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marcelo Pélos <mpelos@gmail.com>"
+    }
+  }
+}
