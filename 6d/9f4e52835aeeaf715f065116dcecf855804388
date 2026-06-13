@@ -1,0 +1,19 @@
+settings.json
+  s_69c7c19dad3ebc::t_62acb0bb2caf69 67
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "6d9f4e52835aeeaf715f065116dcecf855804388",
+  "prompts": {},
+  "sessions": {
+    "s_69c7c19dad3ebc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "65cd859a-8f34-4f9e-945b-743da42143fa",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Marcelo Pélos <mpelos@gmail.com>"
+    }
+  }
+}
