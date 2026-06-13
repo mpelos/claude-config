@@ -64,7 +64,7 @@
   },
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
-  "autoCompactEnabled": false,
+  "autoCompactEnabled": true,
   "teammateMode": "tmux",
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
