@@ -1,0 +1,786 @@
+.gitignore
+  s_955aa0951d1d23::t_c06ab3b08d9fe0 9
+skills/create-pr/SKILL.md
+  s_ff692664c49501::t_5d32fed90ba7c3 1-71
+CLAUDE.md
+  s_955aa0951d1d23::t_55ade1d1705901 1-9,12-19
+  s_934aa10726e7c0::t_293542fc7e4c0e 10-11,20-94,120-144,170-174
+  s_934aa10726e7c0::t_fc6360dbc20221 95-97,117-119
+  s_934aa10726e7c0::t_00a448d2edf22d 145-147,167-169
+  s_934aa10726e7c0::t_f3f3eabfaadcc4 175-177
+  s_934aa10726e7c0::t_8bd7f977adddc2 98-116,148-166
+plugins/installed_plugins.json
+  s_934aa10726e7c0::t_4ea7af35f8bb64 18-19,21-22,29-30,32-33,66-75
+settings.json
+  s_934aa10726e7c0::t_822fc731a8b072 15,23,34,54,60-65,74
+skills/agents-sdk/SKILL.md
+  s_934aa10726e7c0::t_a3f35b984108d2 1-221
+skills/agents-sdk/references/browse-the-web.md
+  s_934aa10726e7c0::t_4f8cd4f97bcfff 1-63
+skills/agents-sdk/references/callable.md
+  s_934aa10726e7c0::t_8e7ae7f8d2ae35 1-92
+skills/agents-sdk/references/client-sdk.md
+  s_934aa10726e7c0::t_ade3a3ab550f88 1-110
+skills/agents-sdk/references/codemode.md
+  s_934aa10726e7c0::t_e1c3bce6fc3698 1-110
+skills/agents-sdk/references/configuration.md
+  s_934aa10726e7c0::t_add525ebef38f7 1-72
+skills/agents-sdk/references/durable-execution.md
+  s_934aa10726e7c0::t_6fe5cecc2ab8d1 1-51
+skills/agents-sdk/references/email.md
+  s_934aa10726e7c0::t_78ec780dea9d31 1-146
+skills/agents-sdk/references/human-in-the-loop.md
+  s_934aa10726e7c0::t_1614aea0c3a7f1 1-67
+skills/agents-sdk/references/mcp.md
+  s_934aa10726e7c0::t_f18a2a934be87d 1-188
+skills/agents-sdk/references/observability.md
+  s_934aa10726e7c0::t_edac33cbe53ff9 1-44
+skills/agents-sdk/references/queue-retries.md
+  s_934aa10726e7c0::t_12616a10a1647c 1-79
+skills/agents-sdk/references/routing.md
+  s_934aa10726e7c0::t_17685fbbb97f7a 1-75
+skills/agents-sdk/references/server-driven-messages.md
+  s_934aa10726e7c0::t_33a3fea9fc7b2e 1-63
+skills/agents-sdk/references/state-scheduling.md
+  s_934aa10726e7c0::t_a6a05bc8d35b75 1-171
+skills/agents-sdk/references/streaming-chat.md
+  s_934aa10726e7c0::t_0a466d9b215053 1-198
+skills/agents-sdk/references/think.md
+  s_934aa10726e7c0::t_119714c2c75394 1,3,5,7-8,10-64,67-112
+skills/agents-sdk/references/voice.md
+  s_934aa10726e7c0::t_af4eb73cb399a0 1-68
+skills/agents-sdk/references/webhooks-push.md
+  s_934aa10726e7c0::t_3b1b03daa13d64 1-86
+skills/agents-sdk/references/workflows.md
+  s_934aa10726e7c0::t_f5d0d27f244c63 1-132
+skills/cloudflare-email-service/SKILL.md
+  s_934aa10726e7c0::t_22dc9fe2420811 1-103
+skills/cloudflare-email-service/references/cli-and-mcp.md
+  s_934aa10726e7c0::t_d887981adaf072 1-125
+skills/cloudflare-email-service/references/deliverability.md
+  s_934aa10726e7c0::t_68a094bc68d503 1,3,5,7,9-14,16,18,20,22,24,26,28,30,32-37,39-42,44-45,47,49,51,53-56,58,60,62-70,72,74,76,78-81,83,85-91,93,95,97,99-102,104,106-285
+skills/cloudflare-email-service/references/rest-api.md
+  s_934aa10726e7c0::t_1e562911f47599 1-184
+skills/cloudflare-email-service/references/routing.md
+  s_934aa10726e7c0::t_101e293f6df3e0 1-199
+skills/cloudflare-email-service/references/sending.md
+  s_934aa10726e7c0::t_2f34aae9b68c4f 1-252
+skills/cloudflare-one-migrations/SKILL.md
+  s_934aa10726e7c0::t_85964aa00dd56c 1-110
+skills/cloudflare-one/SKILL.md
+  s_934aa10726e7c0::t_2cc7493c1702e3 1-176
+skills/cloudflare/SKILL.md
+  s_934aa10726e7c0::t_66129cc0ca8c9e 1-248
+skills/cloudflare/references/agents-sdk/README.md
+  s_934aa10726e7c0::t_1d4f5ef648204c 1,3,5-6,8-41,43-56,59-89
+skills/cloudflare/references/agents-sdk/api.md
+  s_934aa10726e7c0::t_131caa37d6e12a 1-190
+skills/cloudflare/references/agents-sdk/configuration.md
+  s_934aa10726e7c0::t_97607dd676fe44 1-182
+skills/cloudflare/references/agents-sdk/gotchas.md
+  s_934aa10726e7c0::t_ea7895bc9ea02a 1-158
+skills/cloudflare/references/agents-sdk/patterns.md
+  s_934aa10726e7c0::t_6792d7f45f7d83 1-192
+skills/cloudflare/references/ai-gateway/README.md
+  s_934aa10726e7c0::t_e49457b6ae4486 1-175
+skills/cloudflare/references/ai-gateway/configuration.md
+  s_934aa10726e7c0::t_49ccc826a05e9e 1-111
+skills/cloudflare/references/ai-gateway/dynamic-routing.md
+  s_934aa10726e7c0::t_0e8bbf377013a0 1,3,6-41,43-53,56-75,77,79-82
+skills/cloudflare/references/ai-gateway/features.md
+  s_934aa10726e7c0::t_23fa4b5ca33052 1-96
+skills/cloudflare/references/ai-gateway/sdk-integration.md
+  s_934aa10726e7c0::t_74705499a9cae4 1-114
+skills/cloudflare/references/ai-gateway/troubleshooting.md
+  s_934aa10726e7c0::t_849749f371b3b4 1-88
+skills/cloudflare/references/ai-search/README.md
+  s_934aa10726e7c0::t_ad809020a7bd84 1-138
+skills/cloudflare/references/ai-search/api.md
+  s_934aa10726e7c0::t_a9599d9d806715 1-87
+skills/cloudflare/references/ai-search/configuration.md
+  s_934aa10726e7c0::t_e620a07267a20e 1,3,5-59,61-63,65-74,77-81,83-86,88
+skills/cloudflare/references/ai-search/gotchas.md
+  s_934aa10726e7c0::t_8d333fad8b318a 1-81
+skills/cloudflare/references/ai-search/patterns.md
+  s_934aa10726e7c0::t_7775d451a4545f 1-85
+skills/cloudflare/references/analytics-engine/README.md
+  s_934aa10726e7c0::t_96091724a1ee67 1-94
+skills/cloudflare/references/analytics-engine/api.md
+  s_934aa10726e7c0::t_d2e8650124cdc3 1-112
+skills/cloudflare/references/analytics-engine/configuration.md
+  s_934aa10726e7c0::t_216ce0dd9a063f 1-112
+skills/cloudflare/references/analytics-engine/gotchas.md
+  s_934aa10726e7c0::t_1b05243039300c 1-85
+skills/cloudflare/references/analytics-engine/patterns.md
+  s_934aa10726e7c0::t_a9ec6da98434f6 1-83
+skills/cloudflare/references/api-shield/README.md
+  s_934aa10726e7c0::t_92f62f7d0cbd6b 1,3,5-17,20-26,29-44
+skills/cloudflare/references/api-shield/api.md
+  s_934aa10726e7c0::t_4bceb94b91324a 1-141
+skills/cloudflare/references/api-shield/configuration.md
+  s_934aa10726e7c0::t_985d281b9db39d 1-192
+skills/cloudflare/references/api-shield/gotchas.md
+  s_934aa10726e7c0::t_924f3097ad96c1 1-125
+skills/cloudflare/references/api-shield/patterns.md
+  s_934aa10726e7c0::t_2b1d9c597eefe2 1-180
+skills/cloudflare/references/api/README.md
+  s_934aa10726e7c0::t_1fd85b5d53cf98 1-66
+skills/cloudflare/references/api/api.md
+  s_934aa10726e7c0::t_b169f15685323c 1-204
+skills/cloudflare/references/api/configuration.md
+  s_934aa10726e7c0::t_7d443656f32be2 1-160
+skills/cloudflare/references/api/gotchas.md
+  s_934aa10726e7c0::t_37547c736cd377 1-225
+skills/cloudflare/references/api/patterns.md
+  s_934aa10726e7c0::t_00b31b78c4d376 1-204
+skills/cloudflare/references/argo-smart-routing/README.md
+  s_934aa10726e7c0::t_86848f56ee0420 1-90
+skills/cloudflare/references/argo-smart-routing/api.md
+  s_934aa10726e7c0::t_f22afdd1830b8f 1-240
+skills/cloudflare/references/argo-smart-routing/configuration.md
+  s_934aa10726e7c0::t_f808b388c5c802 1-197
+skills/cloudflare/references/argo-smart-routing/gotchas.md
+  s_934aa10726e7c0::t_7f192f90275e6a 1-111
+skills/cloudflare/references/argo-smart-routing/patterns.md
+  s_934aa10726e7c0::t_1c840d0a135ad8 1,3,5-40,42-49,51-101,104
+skills/cloudflare/references/artifacts/README.md
+  s_934aa10726e7c0::t_dfcd560ee34571 1-79
+skills/cloudflare/references/artifacts/api.md
+  s_934aa10726e7c0::t_fd594bbb968610 1-128
+skills/cloudflare/references/artifacts/configuration.md
+  s_934aa10726e7c0::t_8605537b601077 1-92
+skills/cloudflare/references/bindings/README.md
+  s_934aa10726e7c0::t_ef1e14b8ba4e62 1-122
+skills/cloudflare/references/bindings/api.md
+  s_934aa10726e7c0::t_7568a01643ad27 1-203
+skills/cloudflare/references/bindings/configuration.md
+  s_934aa10726e7c0::t_3819462d3c9df0 1-188
+skills/cloudflare/references/bindings/gotchas.md
+  s_934aa10726e7c0::t_5ac64d2eef065b 1-208
+skills/cloudflare/references/bindings/patterns.md
+  s_934aa10726e7c0::t_06412b1b8994bd 1-200
+skills/cloudflare/references/bot-management/README.md
+  s_934aa10726e7c0::t_20959eaaef1b8e 1-94
+skills/cloudflare/references/bot-management/api.md
+  s_934aa10726e7c0::t_1e407de6f1ec7f 1-169
+skills/cloudflare/references/bot-management/configuration.md
+  s_934aa10726e7c0::t_88e34ceb758564 1-163
+skills/cloudflare/references/bot-management/gotchas.md
+  s_934aa10726e7c0::t_6d583f5a6d19e6 1-114
+skills/cloudflare/references/bot-management/patterns.md
+  s_934aa10726e7c0::t_9c6be869f86ca2 1-182
+skills/cloudflare/references/browser-rendering/README.md
+  s_934aa10726e7c0::t_b78cb5767c0ff7 1-78
+skills/cloudflare/references/browser-rendering/api.md
+  s_934aa10726e7c0::t_3a7408eacb95c4 1-108
+skills/cloudflare/references/browser-rendering/configuration.md
+  s_934aa10726e7c0::t_d97d92cc045e8f 1-78
+skills/cloudflare/references/browser-rendering/gotchas.md
+  s_934aa10726e7c0::t_b6fc936d1d023b 1-88
+skills/cloudflare/references/browser-rendering/patterns.md
+  s_934aa10726e7c0::t_33888aeff9c232 1-91
+skills/cloudflare/references/c3/README.md
+  s_934aa10726e7c0::t_34d157250f7c7b 1-111
+skills/cloudflare/references/c3/api.md
+  s_934aa10726e7c0::t_433f4feae06ae2 1-71
+skills/cloudflare/references/c3/configuration.md
+  s_934aa10726e7c0::t_4d781917184bad 1-81
+skills/cloudflare/references/c3/gotchas.md
+  s_934aa10726e7c0::t_d05d787acbe8a0 1-92
+skills/cloudflare/references/c3/patterns.md
+  s_934aa10726e7c0::t_bc6ba87003cc31 1-82
+skills/cloudflare/references/cache-reserve/README.md
+  s_934aa10726e7c0::t_020e85ef7f6d88 1-147
+skills/cloudflare/references/cache-reserve/api.md
+  s_934aa10726e7c0::t_31d34da86ced22 1-194
+skills/cloudflare/references/cache-reserve/configuration.md
+  s_934aa10726e7c0::t_143309e18d1194 1-169
+skills/cloudflare/references/cache-reserve/gotchas.md
+  s_934aa10726e7c0::t_e1d4d77dd3658b 1-132
+skills/cloudflare/references/cache-reserve/patterns.md
+  s_934aa10726e7c0::t_ac5174790d23ec 1-197
+skills/cloudflare/references/containers/README.md
+  s_934aa10726e7c0::t_00d87a03b959d8 1-85
+skills/cloudflare/references/containers/api.md
+  s_934aa10726e7c0::t_6ecdc9162b6ba0 1-187
+skills/cloudflare/references/containers/configuration.md
+  s_934aa10726e7c0::t_27f770f68a7d2f 1-188
+skills/cloudflare/references/containers/gotchas.md
+  s_934aa10726e7c0::t_74207fbce84d85 1-178
+skills/cloudflare/references/containers/patterns.md
+  s_934aa10726e7c0::t_ab12e6821b9022 1-202
+skills/cloudflare/references/cron-triggers/README.md
+  s_934aa10726e7c0::t_c8b933dbddd7ad 1-99
+skills/cloudflare/references/cron-triggers/api.md
+  s_934aa10726e7c0::t_9265c45e3b0ec5 1-196
+skills/cloudflare/references/cron-triggers/configuration.md
+  s_934aa10726e7c0::t_e80b270aff85a5 1-180
+skills/cloudflare/references/cron-triggers/gotchas.md
+  s_934aa10726e7c0::t_cf352bb215b68b 1-199
+skills/cloudflare/references/cron-triggers/patterns.md
+  s_934aa10726e7c0::t_c3a20765f94d8d 1-190
+skills/cloudflare/references/d1/README.md
+  s_934aa10726e7c0::t_76192edc0d3ad4 1-133
+skills/cloudflare/references/d1/api.md
+  s_934aa10726e7c0::t_3fe89ddb6818f0 1-196
+skills/cloudflare/references/d1/configuration.md
+  s_934aa10726e7c0::t_6375efd90ae1ad 1-191
+skills/cloudflare/references/d1/gotchas.md
+  s_934aa10726e7c0::t_f37be3a89b33af 1-98
+skills/cloudflare/references/d1/patterns.md
+  s_934aa10726e7c0::t_dd4fae76435749 1-189
+skills/cloudflare/references/ddos/README.md
+  s_934aa10726e7c0::t_f1802084b65213 1-41
+skills/cloudflare/references/ddos/api.md
+  s_934aa10726e7c0::t_1e9111e67573e9 1-164
+skills/cloudflare/references/ddos/configuration.md
+  s_934aa10726e7c0::t_af78d07fa78d35 1-93
+skills/cloudflare/references/ddos/gotchas.md
+  s_934aa10726e7c0::t_1d72749b1a564b 1-107
+skills/cloudflare/references/ddos/patterns.md
+  s_934aa10726e7c0::t_d80ae9093332e9 1-174
+skills/cloudflare/references/do-storage/README.md
+  s_934aa10726e7c0::t_7a68c24c1a1704 1-75
+skills/cloudflare/references/do-storage/api.md
+  s_934aa10726e7c0::t_d1bda1bb571337 1-102
+skills/cloudflare/references/do-storage/configuration.md
+  s_934aa10726e7c0::t_7d2482e8b687ff 1-112
+skills/cloudflare/references/do-storage/gotchas.md
+  s_934aa10726e7c0::t_4ee86e2344b590 1-150
+skills/cloudflare/references/do-storage/patterns.md
+  s_934aa10726e7c0::t_7ae95c34df03cd 1-194
+skills/cloudflare/references/do-storage/testing.md
+  s_934aa10726e7c0::t_af6b72f174cac0 1-183
+skills/cloudflare/references/durable-objects/README.md
+  s_934aa10726e7c0::t_261283a4d89b65 1-185
+skills/cloudflare/references/durable-objects/api.md
+  s_934aa10726e7c0::t_8c39492de2bc43 1-187
+skills/cloudflare/references/durable-objects/configuration.md
+  s_934aa10726e7c0::t_b5a74b74fbbc84 1-160
+skills/cloudflare/references/durable-objects/gotchas.md
+  s_934aa10726e7c0::t_40da5706131477 1-197
+skills/cloudflare/references/durable-objects/patterns.md
+  s_934aa10726e7c0::t_bbb15fcf645154 1,3,5-12,14,16-17,19-22,24-42,45-59,61-73,75-96,98,100,102-108,110-124,126-133,135,137-143,145-148,150-151,153-175,177,179,181-186,189-195,197,199-201
+skills/cloudflare/references/email-routing/README.md
+  s_934aa10726e7c0::t_7c5da455d1ce05 1-89
+skills/cloudflare/references/email-routing/api.md
+  s_934aa10726e7c0::t_bf012793454cb9 1-195
+skills/cloudflare/references/email-routing/configuration.md
+  s_934aa10726e7c0::t_6a1152e7e928fb 1-186
+skills/cloudflare/references/email-routing/gotchas.md
+  s_934aa10726e7c0::t_1b5f6d93e013a6 1-196
+skills/cloudflare/references/email-routing/patterns.md
+  s_934aa10726e7c0::t_7a7b9ab7f887e9 1-229
+skills/cloudflare/references/email-workers/README.md
+  s_934aa10726e7c0::t_ef466eba14b71f 1-151
+skills/cloudflare/references/email-workers/api.md
+  s_934aa10726e7c0::t_6092dcc7d04c60 1-237
+skills/cloudflare/references/email-workers/configuration.md
+  s_934aa10726e7c0::t_0dcb23f956e7ed 1-112
+skills/cloudflare/references/email-workers/gotchas.md
+  s_934aa10726e7c0::t_413ee2e90a9ae0 1-125
+skills/cloudflare/references/email-workers/patterns.md
+  s_934aa10726e7c0::t_27745b5efe8dcf 1-102
+skills/cloudflare/references/flagship/README.md
+  s_934aa10726e7c0::t_b18c14a54b1f0f 1-59
+skills/cloudflare/references/flagship/api.md
+  s_934aa10726e7c0::t_6520a9c5c64b8f 1-390
+skills/cloudflare/references/flagship/configuration.md
+  s_934aa10726e7c0::t_fcfb5483f43b51 1-202
+skills/cloudflare/references/flagship/gotchas.md
+  s_934aa10726e7c0::t_78c2635ed29e37 1-178
+skills/cloudflare/references/flagship/patterns.md
+  s_934aa10726e7c0::t_b4f7a3fbbd6c59 1-469
+skills/cloudflare/references/graphql-api/README.md
+  s_934aa10726e7c0::t_52e19c90375661 1-147
+skills/cloudflare/references/graphql-api/api.md
+  s_934aa10726e7c0::t_fb7e146c44e0df 1-175
+skills/cloudflare/references/graphql-api/configuration.md
+  s_934aa10726e7c0::t_97883f971c3e75 1,3-13,15-20,22-38,41-56,58-72,75-100,102-110,113-118
+skills/cloudflare/references/graphql-api/gotchas.md
+  s_934aa10726e7c0::t_830d5c621de0a4 1-110
+skills/cloudflare/references/graphql-api/patterns.md
+  s_934aa10726e7c0::t_19916a5988b898 1-225
+skills/cloudflare/references/hyperdrive/README.md
+  s_934aa10726e7c0::t_017ed23830234d 1-82
+skills/cloudflare/references/hyperdrive/api.md
+  s_934aa10726e7c0::t_92e76d10c24c31 1-143
+skills/cloudflare/references/hyperdrive/configuration.md
+  s_934aa10726e7c0::t_14d9d745387fdb 1-159
+skills/cloudflare/references/hyperdrive/gotchas.md
+  s_934aa10726e7c0::t_b0190373505e7b 1-77
+skills/cloudflare/references/hyperdrive/patterns.md
+  s_934aa10726e7c0::t_63f95bbc21dde8 1-190
+skills/cloudflare/references/images/README.md
+  s_934aa10726e7c0::t_3d06393f6831ff 1-61
+skills/cloudflare/references/images/api.md
+  s_934aa10726e7c0::t_fe64b232c84f1a 1-96
+skills/cloudflare/references/images/configuration.md
+  s_934aa10726e7c0::t_e37935f381ee0b 1-211
+skills/cloudflare/references/images/gotchas.md
+  s_934aa10726e7c0::t_f67d6a5aaaf922 1-99
+skills/cloudflare/references/images/patterns.md
+  s_934aa10726e7c0::t_520efe16bedcec 1-115
+skills/cloudflare/references/kv/README.md
+  s_934aa10726e7c0::t_a1c7bbac14c148 1-89
+skills/cloudflare/references/kv/api.md
+  s_934aa10726e7c0::t_1094077365bafd 1-160
+skills/cloudflare/references/kv/configuration.md
+  s_934aa10726e7c0::t_0258e09e589fd3 1-15,17-20,22-25,27-48,50-144
+skills/cloudflare/references/kv/gotchas.md
+  s_934aa10726e7c0::t_e1d1c1bf37c049 1-131
+skills/cloudflare/references/kv/patterns.md
+  s_934aa10726e7c0::t_1f72f0801b4d55 1-196
+skills/cloudflare/references/miniflare/README.md
+  s_934aa10726e7c0::t_3d3a8ef5492bfa 1-105
+skills/cloudflare/references/miniflare/api.md
+  s_934aa10726e7c0::t_bd07a86afd3561 1-187
+skills/cloudflare/references/miniflare/configuration.md
+  s_934aa10726e7c0::t_00f69896605267 1-173
+skills/cloudflare/references/miniflare/gotchas.md
+  s_934aa10726e7c0::t_63112354d61cae 1-160
+skills/cloudflare/references/miniflare/patterns.md
+  s_934aa10726e7c0::t_a96931ccf1424f 1-181
+skills/cloudflare/references/network-interconnect/README.md
+  s_934aa10726e7c0::t_b79e98f9a3311f 1-99
+skills/cloudflare/references/network-interconnect/api.md
+  s_934aa10726e7c0::t_3db253c832b769 1-199
+skills/cloudflare/references/network-interconnect/configuration.md
+  s_934aa10726e7c0::t_2a676f3a064080 1-114
+skills/cloudflare/references/network-interconnect/gotchas.md
+  s_934aa10726e7c0::t_f0442de75f3230 1-165
+skills/cloudflare/references/network-interconnect/patterns.md
+  s_934aa10726e7c0::t_06c23c55db6d1e 1-166
+skills/cloudflare/references/observability/README.md
+  s_934aa10726e7c0::t_aff3bbf9b6af04 1-88
+skills/cloudflare/references/observability/api.md
+  s_934aa10726e7c0::t_9fb589a8039647 1-164
+skills/cloudflare/references/observability/configuration.md
+  s_934aa10726e7c0::t_93fe1cb50bdb29 1-169
+skills/cloudflare/references/observability/gotchas.md
+  s_934aa10726e7c0::t_846939a7d0ca72 1,3,5-9,11-66,68-97,100-115
+skills/cloudflare/references/observability/patterns.md
+  s_934aa10726e7c0::t_d0941ea0c2331b 1-105
+skills/cloudflare/references/pages-functions/README.md
+  s_934aa10726e7c0::t_65c2e8070fab93 1-98
+skills/cloudflare/references/pages-functions/api.md
+  s_934aa10726e7c0::t_9c0d5f15046e99 1-143
+skills/cloudflare/references/pages-functions/configuration.md
+  s_934aa10726e7c0::t_69aef84847eb02 1-122
+skills/cloudflare/references/pages-functions/gotchas.md
+  s_934aa10726e7c0::t_20b12cbf9cd832 1-94
+skills/cloudflare/references/pages-functions/patterns.md
+  s_934aa10726e7c0::t_0e7432c2b66657 1-137
+skills/cloudflare/references/pages/README.md
+  s_934aa10726e7c0::t_5011cdafd06830 1-88
+skills/cloudflare/references/pages/api.md
+  s_934aa10726e7c0::t_aff9e7afaf34eb 1-204
+skills/cloudflare/references/pages/configuration.md
+  s_934aa10726e7c0::t_b2b8f4cedf359b 1-201
+skills/cloudflare/references/pages/gotchas.md
+  s_934aa10726e7c0::t_48ad06ac746ba7 1-203
+skills/cloudflare/references/pages/patterns.md
+  s_934aa10726e7c0::t_788fff92c2c4cb 1-204
+skills/cloudflare/references/pipelines/README.md
+  s_934aa10726e7c0::t_2f6e18baa044f8 1-90
+skills/cloudflare/references/pipelines/api.md
+  s_934aa10726e7c0::t_2b190470f0b754 1-124
+skills/cloudflare/references/pipelines/configuration.md
+  s_934aa10726e7c0::t_9d65356f292ba4 1,3,5,7-20,22-32,35-155
+skills/cloudflare/references/pipelines/gotchas.md
+  s_934aa10726e7c0::t_56ae93712fcf5a 1-58
+skills/cloudflare/references/pipelines/patterns.md
+  s_934aa10726e7c0::t_50a1f07c17c201 1-130
+skills/cloudflare/references/pulumi/README.md
+  s_934aa10726e7c0::t_7ced027fc8ad5f 1-100
+skills/cloudflare/references/pulumi/api.md
+  s_934aa10726e7c0::t_17f18b17cb6ae6 1-200
+skills/cloudflare/references/pulumi/configuration.md
+  s_934aa10726e7c0::t_acd3069ddcc38b 1-198
+skills/cloudflare/references/pulumi/gotchas.md
+  s_934aa10726e7c0::t_7e7626f5d7db22 1-181
+skills/cloudflare/references/pulumi/patterns.md
+  s_934aa10726e7c0::t_7fa37519d81816 1-188,191
+skills/cloudflare/references/queues/README.md
+  s_934aa10726e7c0::t_c466ba3a784444 1-96
+skills/cloudflare/references/queues/api.md
+  s_934aa10726e7c0::t_46657887ad15cf 1-206
+skills/cloudflare/references/queues/configuration.md
+  s_934aa10726e7c0::t_138c742b883699 1-144
+skills/cloudflare/references/queues/gotchas.md
+  s_934aa10726e7c0::t_141cc7ea509d80 1-206
+skills/cloudflare/references/queues/patterns.md
+  s_934aa10726e7c0::t_842d8d1fe4f6be 1-220
+skills/cloudflare/references/r2-data-catalog/README.md
+  s_934aa10726e7c0::t_3a23922b81045d 1-75
+skills/cloudflare/references/r2-data-catalog/api.md
+  s_934aa10726e7c0::t_39d637aa0bd8c3 1-122
+skills/cloudflare/references/r2-data-catalog/configuration.md
+  s_934aa10726e7c0::t_1abcf24cdf4d8e 1-98
+skills/cloudflare/references/r2-data-catalog/gotchas.md
+  s_934aa10726e7c0::t_6f072d7f595687 1-55
+skills/cloudflare/references/r2-data-catalog/patterns.md
+  s_934aa10726e7c0::t_860de16da65e9f 1-122
+skills/cloudflare/references/r2-sql/README.md
+  s_934aa10726e7c0::t_cbcab0c3545bd8 1-64
+skills/cloudflare/references/r2-sql/api.md
+  s_934aa10726e7c0::t_65aee9901a748f 1-121
+skills/cloudflare/references/r2-sql/configuration.md
+  s_934aa10726e7c0::t_d8a499d77eb573 1-50
+skills/cloudflare/references/r2-sql/gotchas.md
+  s_934aa10726e7c0::t_ef6326bb96dd00 1-39
+skills/cloudflare/references/r2-sql/patterns.md
+  s_934aa10726e7c0::t_83edc85cb6a933 1-118
+skills/cloudflare/references/r2/README.md
+  s_934aa10726e7c0::t_5700aaecd2897e 1,3,5,7-20,22-31,34-95
+skills/cloudflare/references/r2/api.md
+  s_934aa10726e7c0::t_4d7096b2198d54 1-200
+skills/cloudflare/references/r2/configuration.md
+  s_934aa10726e7c0::t_9ac2747837a0a2 1-165
+skills/cloudflare/references/r2/gotchas.md
+  s_934aa10726e7c0::t_528327a0f1b7c7 1-190
+skills/cloudflare/references/r2/patterns.md
+  s_934aa10726e7c0::t_d519f09c0274aa 1-193
+skills/cloudflare/references/realtime-sfu/README.md
+  s_934aa10726e7c0::t_62fab22d987732 1-65
+skills/cloudflare/references/realtime-sfu/api.md
+  s_934aa10726e7c0::t_edf8d04a3e9f02 1-158
+skills/cloudflare/references/realtime-sfu/configuration.md
+  s_934aa10726e7c0::t_7ff5e157402668 1-137
+skills/cloudflare/references/realtime-sfu/gotchas.md
+  s_934aa10726e7c0::t_1881c249b20afc 1-133
+skills/cloudflare/references/realtime-sfu/patterns.md
+  s_934aa10726e7c0::t_de975d68c28c76 1-174
+skills/cloudflare/references/realtimekit/README.md
+  s_934aa10726e7c0::t_1b15509c7f03be 1-113
+skills/cloudflare/references/realtimekit/api.md
+  s_934aa10726e7c0::t_e6011add49bd2e 1-212
+skills/cloudflare/references/realtimekit/configuration.md
+  s_934aa10726e7c0::t_c1df453a6bbccf 1-203
+skills/cloudflare/references/realtimekit/gotchas.md
+  s_934aa10726e7c0::t_b117b40afe2375 1-169
+skills/cloudflare/references/realtimekit/patterns.md
+  s_934aa10726e7c0::t_b0a72d1285d0d6 1-223
+skills/cloudflare/references/sandbox/README.md
+  s_934aa10726e7c0::t_83649d168eed9a 1-96
+skills/cloudflare/references/sandbox/api.md
+  s_934aa10726e7c0::t_2d6ec9daae7b65 1-198
+skills/cloudflare/references/sandbox/configuration.md
+  s_934aa10726e7c0::t_e842c168ef4212 1-143
+skills/cloudflare/references/sandbox/gotchas.md
+  s_934aa10726e7c0::t_0be31f7de49ac9 1-194
+skills/cloudflare/references/sandbox/patterns.md
+  s_934aa10726e7c0::t_e5b73190336ef1 1-201
+skills/cloudflare/references/smart-placement/README.md
+  s_934aa10726e7c0::t_4d124b24b81b7a 1-138
+skills/cloudflare/references/smart-placement/api.md
+  s_934aa10726e7c0::t_a78d00a1164559 1-183
+skills/cloudflare/references/smart-placement/configuration.md
+  s_934aa10726e7c0::t_6ec81063dce753 1-196
+skills/cloudflare/references/smart-placement/gotchas.md
+  s_934aa10726e7c0::t_f02d2ba95170e4 1-174
+skills/cloudflare/references/smart-placement/patterns.md
+  s_934aa10726e7c0::t_acf4f61ec5c2d7 1-183
+skills/cloudflare/references/snippets/README.md
+  s_934aa10726e7c0::t_7e03b0325e6d84 1-68
+skills/cloudflare/references/snippets/api.md
+  s_934aa10726e7c0::t_5ccb458d3e285a 1-198
+skills/cloudflare/references/snippets/configuration.md
+  s_934aa10726e7c0::t_5e663aefed3be2 1-227
+skills/cloudflare/references/snippets/gotchas.md
+  s_934aa10726e7c0::t_dfdaac05ad2ab9 1-86
+skills/cloudflare/references/snippets/patterns.md
+  s_934aa10726e7c0::t_9f3dac0bcb9ef3 1-135
+skills/cloudflare/references/spectrum/README.md
+  s_934aa10726e7c0::t_818a351de9cbab 1-52
+skills/cloudflare/references/spectrum/api.md
+  s_934aa10726e7c0::t_d37bd1fd333bd2 1-181
+skills/cloudflare/references/spectrum/configuration.md
+  s_934aa10726e7c0::t_ca3ccab208aa1e 1,3,5,7-16,18-102,105-189,191,193-194
+skills/cloudflare/references/spectrum/gotchas.md
+  s_934aa10726e7c0::t_391d2b74c42c43 1-145
+skills/cloudflare/references/spectrum/patterns.md
+  s_934aa10726e7c0::t_91c85dba0e7bb4 1-196
+skills/cloudflare/references/static-assets/README.md
+  s_934aa10726e7c0::t_7d9dd272e20599 1-65
+skills/cloudflare/references/static-assets/api.md
+  s_934aa10726e7c0::t_a7a2d9db9a3d61 1-199
+skills/cloudflare/references/static-assets/configuration.md
+  s_934aa10726e7c0::t_f0a42f8758facf 1-186
+skills/cloudflare/references/static-assets/gotchas.md
+  s_934aa10726e7c0::t_a45782f5cc171d 1-162
+skills/cloudflare/references/static-assets/patterns.md
+  s_934aa10726e7c0::t_2e8e201c9bb384 1-189
+skills/cloudflare/references/stream/README.md
+  s_934aa10726e7c0::t_2c5019ef72267c 1-114
+skills/cloudflare/references/stream/api-live.md
+  s_934aa10726e7c0::t_cc31d5b76002a7 1-195
+skills/cloudflare/references/stream/api.md
+  s_934aa10726e7c0::t_462ef5a1148ac8 1-199
+skills/cloudflare/references/stream/configuration.md
+  s_934aa10726e7c0::t_6a215dfba84bca 1,3,5,7-15,17-69,72-136,138,140-141
+skills/cloudflare/references/stream/gotchas.md
+  s_934aa10726e7c0::t_59c889767454e2 1-130
+skills/cloudflare/references/stream/patterns.md
+  s_934aa10726e7c0::t_6f716a8357a125 1-184
+skills/cloudflare/references/tail-workers/README.md
+  s_934aa10726e7c0::t_e1bdd2719c0d40 1-89
+skills/cloudflare/references/tail-workers/api.md
+  s_934aa10726e7c0::t_7cce9f089397ff 1-200
+skills/cloudflare/references/tail-workers/configuration.md
+  s_934aa10726e7c0::t_5c87d77bd5c8cb 1-176
+skills/cloudflare/references/tail-workers/gotchas.md
+  s_934aa10726e7c0::t_591e06e8453816 1-192
+skills/cloudflare/references/tail-workers/patterns.md
+  s_934aa10726e7c0::t_a5719b3d1fc0ca 1-180
+skills/cloudflare/references/terraform/README.md
+  s_934aa10726e7c0::t_e29b9170e76cf2 1-102
+skills/cloudflare/references/terraform/api.md
+  s_934aa10726e7c0::t_298df4d70cabfa 1-178
+skills/cloudflare/references/terraform/configuration.md
+  s_934aa10726e7c0::t_ae120cd96e4fb5 1-197
+skills/cloudflare/references/terraform/gotchas.md
+  s_934aa10726e7c0::t_1c94ad2cdf32dd 1-150
+skills/cloudflare/references/terraform/patterns.md
+  s_934aa10726e7c0::t_0738a5306a20c8 1-174
+skills/cloudflare/references/tunnel/README.md
+  s_934aa10726e7c0::t_92a62062a474e2 1-129
+skills/cloudflare/references/tunnel/api.md
+  s_934aa10726e7c0::t_fe7eaab395d382 1-193
+skills/cloudflare/references/tunnel/configuration.md
+  s_934aa10726e7c0::t_339c11753afb68 1-157
+skills/cloudflare/references/tunnel/gotchas.md
+  s_934aa10726e7c0::t_0acb9056f30ef6 1-147
+skills/cloudflare/references/tunnel/networking.md
+  s_934aa10726e7c0::t_c6a479e02c42b4 1-168
+skills/cloudflare/references/tunnel/patterns.md
+  s_934aa10726e7c0::t_9d357830232417 1-192
+skills/cloudflare/references/turn/README.md
+  s_934aa10726e7c0::t_3518603c222821 1-82
+skills/cloudflare/references/turn/api.md
+  s_934aa10726e7c0::t_690bc81b99e1fa 1-239
+skills/cloudflare/references/turn/configuration.md
+  s_934aa10726e7c0::t_3bc3bdfe780fd2 1-179
+skills/cloudflare/references/turn/gotchas.md
+  s_934aa10726e7c0::t_3e48413373e720 1-231
+skills/cloudflare/references/turn/patterns.md
+  s_934aa10726e7c0::t_0ab0b4ed6822c2 1-213
+skills/cloudflare/references/turnstile/README.md
+  s_934aa10726e7c0::t_dc54f0c0cff3d1 1-99
+skills/cloudflare/references/turnstile/api.md
+  s_934aa10726e7c0::t_145d989572d291 1-240
+skills/cloudflare/references/turnstile/configuration.md
+  s_934aa10726e7c0::t_cec4a3306de3df 1-222
+skills/cloudflare/references/turnstile/gotchas.md
+  s_934aa10726e7c0::t_4e77c6900cb2c7 1-218
+skills/cloudflare/references/turnstile/patterns.md
+  s_934aa10726e7c0::t_c217d9b62926df 1-193
+skills/cloudflare/references/vectorize/README.md
+  s_934aa10726e7c0::t_aaa7aab7c7378a 1-133
+skills/cloudflare/references/vectorize/api.md
+  s_934aa10726e7c0::t_21b480efd316d5 1-88
+skills/cloudflare/references/vectorize/configuration.md
+  s_934aa10726e7c0::t_8f711d97db7aa5 1-88
+skills/cloudflare/references/vectorize/gotchas.md
+  s_934aa10726e7c0::t_c457d7e789722d 1-76
+skills/cloudflare/references/vectorize/patterns.md
+  s_934aa10726e7c0::t_96f8db9cc832ac 1-90
+skills/cloudflare/references/waf/README.md
+  s_934aa10726e7c0::t_8582e74b0e4d3b 1-113
+skills/cloudflare/references/waf/api.md
+  s_934aa10726e7c0::t_653be8c63d79ee 1-202
+skills/cloudflare/references/waf/configuration.md
+  s_934aa10726e7c0::t_d8d5a211b70d62 1-203
+skills/cloudflare/references/waf/gotchas.md
+  s_934aa10726e7c0::t_940ca9a7e8d7a7 1-204
+skills/cloudflare/references/waf/patterns.md
+  s_934aa10726e7c0::t_8d4b7b645a130c 1-197
+skills/cloudflare/references/web-analytics/README.md
+  s_934aa10726e7c0::t_ee66d2e63441f8 1-141
+skills/cloudflare/references/web-analytics/configuration.md
+  s_934aa10726e7c0::t_f29b2a9922abf8 1-76
+skills/cloudflare/references/web-analytics/gotchas.md
+  s_934aa10726e7c0::t_233b911fd6d3d4 1-82
+skills/cloudflare/references/web-analytics/integration.md
+  s_934aa10726e7c0::t_0c8c4f629ff756 1-60
+skills/cloudflare/references/web-analytics/patterns.md
+  s_934aa10726e7c0::t_72c16e77b0f77b 1-91
+skills/cloudflare/references/workerd/README.md
+  s_934aa10726e7c0::t_06d1d2da76157f 1-78
+skills/cloudflare/references/workerd/api.md
+  s_934aa10726e7c0::t_336df623616743 1-185
+skills/cloudflare/references/workerd/configuration.md
+  s_934aa10726e7c0::t_8b703e957e4e3d 1-183
+skills/cloudflare/references/workerd/gotchas.md
+  s_934aa10726e7c0::t_bde5b9508ed4f0 1-139
+skills/cloudflare/references/workerd/patterns.md
+  s_934aa10726e7c0::t_10dcbc4a8f20cd 1-192
+skills/cloudflare/references/workers-ai/README.md
+  s_934aa10726e7c0::t_2a3335e0cf8e45 1-197
+skills/cloudflare/references/workers-ai/api.md
+  s_934aa10726e7c0::t_d9e20ddac2a74e 1-112
+skills/cloudflare/references/workers-ai/configuration.md
+  s_934aa10726e7c0::t_59c725c24e93d8 1-97
+skills/cloudflare/references/workers-ai/gotchas.md
+  s_934aa10726e7c0::t_d40b6ea3569050 1-114
+skills/cloudflare/references/workers-ai/patterns.md
+  s_934aa10726e7c0::t_8f9835a4c319df 1-120
+skills/cloudflare/references/workers-for-platforms/README.md
+  s_934aa10726e7c0::t_f541b54349ac4d 1-89
+skills/cloudflare/references/workers-for-platforms/api.md
+  s_934aa10726e7c0::t_3e9151b5046a5d 1-196
+skills/cloudflare/references/workers-for-platforms/configuration.md
+  s_934aa10726e7c0::t_476248ccc1f762 1-167
+skills/cloudflare/references/workers-for-platforms/gotchas.md
+  s_934aa10726e7c0::t_8503bb46ea825d 1-134
+skills/cloudflare/references/workers-for-platforms/patterns.md
+  s_934aa10726e7c0::t_e71fc1b52552ff 1-188
+skills/cloudflare/references/workers-playground/README.md
+  s_934aa10726e7c0::t_85617ec81a513c 1-127
+skills/cloudflare/references/workers-playground/api.md
+  s_934aa10726e7c0::t_2d43f8997534cc 1,3,5-25,27-29,31-54,57-101
+skills/cloudflare/references/workers-playground/configuration.md
+  s_934aa10726e7c0::t_8e9fe3f87e82e3 1-163
+skills/cloudflare/references/workers-playground/gotchas.md
+  s_934aa10726e7c0::t_2b88f8663b7f03 1-88
+skills/cloudflare/references/workers-playground/patterns.md
+  s_934aa10726e7c0::t_aa9d58e423d245 1-132
+skills/cloudflare/references/workers-vpc/README.md
+  s_934aa10726e7c0::t_cf0fda0ab965c2 1-127
+skills/cloudflare/references/workers-vpc/api.md
+  s_934aa10726e7c0::t_3f4ac6e1c595a2 1-202
+skills/cloudflare/references/workers-vpc/configuration.md
+  s_934aa10726e7c0::t_68c78c89bb9b81 1-147
+skills/cloudflare/references/workers-vpc/gotchas.md
+  s_934aa10726e7c0::t_adce2db2e1fca5 1-167
+skills/cloudflare/references/workers-vpc/patterns.md
+  s_934aa10726e7c0::t_1dfe6a9529560d 1-209
+skills/cloudflare/references/workers/README.md
+  s_934aa10726e7c0::t_febacb559f6e3c 1-108
+skills/cloudflare/references/workers/api.md
+  s_934aa10726e7c0::t_1a3441713abc49 1-195
+skills/cloudflare/references/workers/configuration.md
+  s_934aa10726e7c0::t_f9a6a9e9bbe644 1-185
+skills/cloudflare/references/workers/frameworks.md
+  s_934aa10726e7c0::t_754ed72b313c25 1-197
+skills/cloudflare/references/workers/gotchas.md
+  s_934aa10726e7c0::t_cebc3c971c3bf3 1-137
+skills/cloudflare/references/workers/patterns.md
+  s_934aa10726e7c0::t_1292675abf14a2 1-198
+skills/cloudflare/references/workflows/README.md
+  s_934aa10726e7c0::t_cd71f835070aee 1-77
+skills/cloudflare/references/workflows/api.md
+  s_934aa10726e7c0::t_50105867d17ac6 1-218
+skills/cloudflare/references/workflows/configuration.md
+  s_934aa10726e7c0::t_3f3abafc32856d 1-152
+skills/cloudflare/references/workflows/gotchas.md
+  s_934aa10726e7c0::t_4894321b326a6e 1-90
+skills/cloudflare/references/workflows/patterns.md
+  s_934aa10726e7c0::t_ce01edf07f3db4 1-175
+skills/cloudflare/references/wrangler/README.md
+  s_934aa10726e7c0::t_f2d5164e5c5364 1-135
+skills/cloudflare/references/wrangler/api.md
+  s_934aa10726e7c0::t_62a95de469ccbd 1-188
+skills/cloudflare/references/wrangler/configuration.md
+  s_934aa10726e7c0::t_335c8eec40e711 1-197
+skills/cloudflare/references/wrangler/gotchas.md
+  s_934aa10726e7c0::t_892db237317373 1-197
+skills/cloudflare/references/wrangler/patterns.md
+  s_934aa10726e7c0::t_4359b1b486bac7 1-209
+skills/cloudflare/references/zaraz/IMPLEMENTATION_SUMMARY.md
+  s_934aa10726e7c0::t_75bbaee93ee33f 1-121
+skills/cloudflare/references/zaraz/README.md
+  s_934aa10726e7c0::t_9bbd1c058efd82 1-111
+skills/cloudflare/references/zaraz/api.md
+  s_934aa10726e7c0::t_29d8e52161d037 1-112
+skills/cloudflare/references/zaraz/configuration.md
+  s_934aa10726e7c0::t_38eb04b2de3c82 1-90
+skills/cloudflare/references/zaraz/gotchas.md
+  s_934aa10726e7c0::t_a7061c9ffc821b 1,3,5-9,11-15,17-24,27-81
+skills/cloudflare/references/zaraz/patterns.md
+  s_934aa10726e7c0::t_4cbf4e66a9a361 1-74
+skills/durable-objects/SKILL.md
+  s_934aa10726e7c0::t_4dd4eeb5b678fa 1-186
+skills/durable-objects/references/rules.md
+  s_934aa10726e7c0::t_8e5d01500d81c3 1-295
+skills/durable-objects/references/testing.md
+  s_934aa10726e7c0::t_fd6b39b70937e2 1-264
+skills/durable-objects/references/workers.md
+  s_934aa10726e7c0::t_339462db07cade 1,3-346
+skills/requesting-code-review
+  s_934aa10726e7c0::t_b59ef0d8b08252 1
+skills/sandbox-sdk/SKILL.md
+  s_934aa10726e7c0::t_11a995087488c9 1-177
+skills/sandbox-sdk/references/api-quick-ref.md
+  s_934aa10726e7c0::t_f46abdc3cad8b3 1-113
+skills/sandbox-sdk/references/examples.md
+  s_934aa10726e7c0::t_7e31212c735169 1-49
+skills/turnstile-spin/README.md
+  s_934aa10726e7c0::t_28c4585b710784 1-51
+skills/turnstile-spin/SKILL.md
+  s_934aa10726e7c0::t_6d6df139064e6e 1-330
+skills/turnstile-spin/references/astro.md
+  s_934aa10726e7c0::t_2288650b7fd89b 1-199
+skills/turnstile-spin/references/hugo.md
+  s_934aa10726e7c0::t_697685aad46fb4 1-114
+skills/turnstile-spin/references/nextjs-app.md
+  s_934aa10726e7c0::t_e62b49623f31b8 1-261
+skills/turnstile-spin/references/nextjs-pages.md
+  s_934aa10726e7c0::t_121e365c6e6ac3 1-82
+skills/turnstile-spin/references/sveltekit.md
+  s_934aa10726e7c0::t_282cd4b90c6a2b 1-191
+skills/turnstile-spin/references/vanilla-html.md
+  s_934aa10726e7c0::t_dc6bf753733c2d 1-157
+skills/turnstile-spin/scripts/auth-probe.sh
+  s_934aa10726e7c0::t_d6f9edd1ad6e53 1-285
+skills/turnstile-spin/scripts/persist-skill.sh
+  s_934aa10726e7c0::t_76fe1c671df76c 1-114
+skills/turnstile-spin/scripts/validate.sh
+  s_934aa10726e7c0::t_23a7edac5319f4 1-137
+skills/turnstile-spin/scripts/widget-create.sh
+  s_934aa10726e7c0::t_90d115032cbf17 1-121
+skills/turnstile-spin/tests/validation.md
+  s_934aa10726e7c0::t_43c6cfeff6653c 1,3-62
+skills/web-perf/SKILL.md
+  s_934aa10726e7c0::t_91e799e56005c3 1-201
+skills/workers-best-practices/SKILL.md
+  s_934aa10726e7c0::t_2006e5c52bbd15 1-127
+skills/workers-best-practices/references/review.md
+  s_934aa10726e7c0::t_cbcd5a0b6475af 1-174
+skills/workers-best-practices/references/rules.md
+  s_934aa10726e7c0::t_7baa4f18efd1c1 1-22,25-36,39-52,55-60,62-75,78-84,87-108,111-131,134-139,142,144,146,148,150-152,154-155,157-159,161-170,172,174,176,178-190,192,194,196-198,200,202-204,206-210,212-214,216,218,220,222-234,237-239,241-262,266-461,463
+skills/wrangler/SKILL.md
+  s_934aa10726e7c0::t_f4e2d5dedcde3d 1-922
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "ae325c1380b578c9fab1a7a0d11946284113599d",
+  "prompts": {},
+  "sessions": {
+    "s_934aa10726e7c0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "019ff600-cc5f-78c1-9f76-2ab9b07b6625",
+        "model": "unknown"
+      },
+      "human_author": "Marcelo Pélos <mpelos@gmail.com>"
+    },
+    "s_955aa0951d1d23": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fc38e-046f-76f2-b553-ec0ccd166e41",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Marcelo Pélos <mpelos@gmail.com>"
+    },
+    "s_ff692664c49501": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f65fe335-9c82-42cc-aaad-79d92ca26d8d",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marcelo Pélos <mpelos@gmail.com>"
+    }
+  }
+}
