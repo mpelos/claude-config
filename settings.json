@@ -12,6 +12,7 @@
     "deny": [],
     "defaultMode": "auto"
   },
+  "model": "opus",
   "hooks": {
     "PostToolUse": [
       {
@@ -19,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$HOME/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
+            "command": "/Users/mpelos/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
           }
         ]
       }
@@ -30,7 +31,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$HOME/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
+            "command": "/Users/mpelos/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
           }
         ]
       },
@@ -50,11 +51,18 @@
     "command": "bash $HOME/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
+    "agent-skills@addy-agent-skills": true,
     "claude-mem@thedotmack": false,
     "pyright-lsp@claude-plugins-official": true,
     "ruby-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
+    "addy-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "addyosmani/agent-skills"
+      }
+    },
     "thedotmack": {
       "source": {
         "source": "github",
@@ -63,6 +71,7 @@
     }
   },
   "effortLevel": "high",
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "autoCompactEnabled": true,
   "teammateMode": "tmux",

@@ -15,22 +15,22 @@
       {
         "scope": "project",
         "projectPath": "/Users/mpelos/workspace/canix/entrc-backend",
-        "installPath": "/Users/mpelos/.claude/plugins/cache/claude-plugins-official/code-review/unknown",
-        "version": "unknown",
+        "installPath": "/Users/mpelos/.claude/plugins/cache/claude-plugins-official/code-review/6d9f4e52835a",
+        "version": "6d9f4e52835a",
         "installedAt": "2026-03-06T12:37:58.984Z",
-        "lastUpdated": "2026-03-25T14:13:25.762Z",
-        "gitCommitSha": "15b07b46dab33aa07efb447e1b592297b9eaa17c"
+        "lastUpdated": "2026-07-08T18:39:31.766Z",
+        "gitCommitSha": "6d9f4e52835aeeaf715f065116dcecf855804388"
       }
     ],
     "github@claude-plugins-official": [
       {
         "scope": "project",
         "projectPath": "/Users/mpelos/workspace/canix/entrc-backend",
-        "installPath": "/Users/mpelos/.claude/plugins/cache/claude-plugins-official/github/unknown",
-        "version": "unknown",
+        "installPath": "/Users/mpelos/.claude/plugins/cache/claude-plugins-official/github/6d9f4e52835a",
+        "version": "6d9f4e52835a",
         "installedAt": "2026-03-06T12:37:59.043Z",
-        "lastUpdated": "2026-03-25T14:13:25.762Z",
-        "gitCommitSha": "15b07b46dab33aa07efb447e1b592297b9eaa17c"
+        "lastUpdated": "2026-07-08T18:39:31.764Z",
+        "gitCommitSha": "6d9f4e52835aeeaf715f065116dcecf855804388"
       }
     ],
     "code-simplifier@claude-plugins-official": [
@@ -62,6 +62,16 @@
         "installedAt": "2026-04-19T13:53:56.802Z",
         "lastUpdated": "2026-06-13T13:39:46.216Z",
         "gitCommitSha": "96ad0e23b4e1a3c976b2f836d2190626b55079f2"
+      }
+    ],
+    "agent-skills@addy-agent-skills": [
+      {
+        "scope": "user",
+        "installPath": "/Users/mpelos/.claude/plugins/cache/addy-agent-skills/agent-skills/3a6fc6392823",
+        "version": "3a6fc6392823",
+        "installedAt": "2026-06-14T13:04:25.046Z",
+        "lastUpdated": "2026-06-14T13:04:25.046Z",
+        "gitCommitSha": "3a6fc6392823e31e2362091bd4e3cddf5b77af14"
       }
     ]
   }

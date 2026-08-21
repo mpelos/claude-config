@@ -5,18 +5,9 @@
 
 # --- Allowed: structural ---
 !.gitignore
-!.superclaude-metadata.json
 
-# --- Allowed: instructions & framework docs ---
+# --- Allowed: instructions ---
 !CLAUDE.md
-!COMMANDS.md
-!FLAGS.md
-!MCP.md
-!MODES.md
-!ORCHESTRATOR.md
-!PERSONAS.md
-!PRINCIPLES.md
-!RULES.md
 
 # --- Allowed: user-owned config ---
 !settings.json
