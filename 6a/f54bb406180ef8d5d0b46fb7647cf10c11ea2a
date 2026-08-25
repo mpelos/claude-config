@@ -1,0 +1,14 @@
+settings.json
+  h_1dbfbab89274c4 15,30,34,39,43,74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "6af54bb406180ef8d5d0b46fb7647cf10c11ea2a",
+  "prompts": {},
+  "humans": {
+    "h_1dbfbab89274c4": {
+      "author": "Marcelo Pélos <mpelos@gmail.com>"
+    }
+  }
+}
