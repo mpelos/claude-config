@@ -24,7 +24,7 @@ their identifier, so swapping a model means editing only this table.
 
 | identifier     | model id       | role                                                                                           |
 | -------------- | -------------- | ---------------------------------------------------------------------------------------------- |
-| **Partner**    | gpt-5.6-sol    | pair-programming partner via codex MCP: majority of implementation, planning, cross-review     |
+| **Partner**    | gpt-6-astra    | pair-programming partner via codex MCP: majority of implementation, planning, cross-review     |
 | **Scout**      | opus-5         | subagents via the Agent tool (`model: 'opus'`): read-only exploration, and the Partner bridge  |
 | **Specialist** | claude-fable-5 | extremely expensive top-tier model. ONLY I choose to use it, by launching a session on it for very complex work. Never spawn it as a subagent or inside workflows, never route work to it on your own judgement |
 
@@ -172,6 +172,10 @@ can continue it. That single fact dictates the topology below.
 - The Partner works on the shared checkout on main. No worktrees or branches unless I
   ask — and once I have asked for one, it stays the project's workspace until I say
   otherwise. One pen per file at a time: if stories could overlap, serialize them.
-- Scouts exist for two jobs only: the bridge above and read-only exploration fan-out —
-  never implementation. Stop exploration Scouts (TaskStop) as soon as their report is
-  processed; the bridge is the one Scout that stays.
+- Scouts exist for three jobs only: the bridge above, read-only exploration fan-out,
+  and verification — never implementation. Stop exploration Scouts (TaskStop) as soon
+  as their report is processed; the bridge is the one Scout that stays.
+- **Verification never runs in the main conversation.** Every test run, typecheck and
+  browser check goes through the `verificador` subagent (`~/.claude/agents/`), which
+  returns only the verdict and the failures. Raw output belongs in its context, not
+  mine.

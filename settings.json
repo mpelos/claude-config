@@ -12,7 +12,7 @@
     "deny": [],
     "defaultMode": "auto"
   },
-  "model": "fable",
+  "model": "opus",
   "hooks": {
     "PostToolUse": [
       {
@@ -32,6 +32,10 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/block-git-push.sh"
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/filter-test-output.sh"
           }
         ]
       },
@@ -44,6 +48,16 @@
           }
         ]
       }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/mpelos/.claude/hooks/context-mode-cache-heal.mjs\""
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
@@ -53,8 +67,10 @@
   "enabledPlugins": {
     "agent-skills@addy-agent-skills": true,
     "claude-mem@thedotmack": false,
-    "pyright-lsp@claude-plugins-official": true,
-    "ruby-lsp@claude-plugins-official": true
+    "pyright-lsp@claude-plugins-official": false,
+    "ruby-lsp@claude-plugins-official": true,
+    "context-mode@context-mode": true,
+    "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "addy-agent-skills": {
@@ -67,6 +83,12 @@
       "source": {
         "source": "github",
         "repo": "thedotmack/claude-mem"
+      }
+    },
+    "context-mode": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/mksglu/context-mode.git"
       }
     }
   },

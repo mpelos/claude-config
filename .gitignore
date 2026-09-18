@@ -21,6 +21,12 @@
 !agents/**
 !skills/
 !skills/**
+# NOTE: skills/synced/ is NOT versioned. It is the local cache of the skills that
+# come from the Claude account itself: every machine signed into the account
+# re-downloads it automatically, the bucket directory is named after the org/user
+# ids, and the bundled Office skills are proprietary Anthropic material whose
+# license forbids retaining or distributing copies outside the service.
+skills/synced/
 !hooks/
 !hooks/**
 !output-styles/
