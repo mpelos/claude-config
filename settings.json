@@ -12,7 +12,7 @@
     "deny": [],
     "defaultMode": "auto"
   },
-  "model": "opus",
+  "model": "fable",
   "hooks": {
     "PostToolUse": [
       {
@@ -32,10 +32,6 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/block-git-push.sh"
-          },
-          {
-            "type": "command",
-            "command": "$HOME/.claude/hooks/filter-test-output.sh"
           }
         ]
       },
@@ -45,16 +41,6 @@
           {
             "type": "command",
             "command": "/Users/mpelos/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
-          }
-        ]
-      }
-    ],
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"/Users/mpelos/.claude/hooks/context-mode-cache-heal.mjs\""
           }
         ]
       }
@@ -69,7 +55,6 @@
     "claude-mem@thedotmack": false,
     "pyright-lsp@claude-plugins-official": false,
     "ruby-lsp@claude-plugins-official": true,
-    "context-mode@context-mode": true,
     "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
@@ -84,15 +69,14 @@
         "source": "github",
         "repo": "thedotmack/claude-mem"
       }
-    },
-    "context-mode": {
-      "source": {
-        "source": "git",
-        "url": "https://github.com/mksglu/context-mode.git"
-      }
     }
   },
   "effortLevel": "high",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
   "autoCompactWindow": 400000,
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,

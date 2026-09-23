@@ -74,16 +74,6 @@
         "gitCommitSha": "3a6fc6392823e31e2362091bd4e3cddf5b77af14"
       }
     ],
-    "context-mode@context-mode": [
-      {
-        "scope": "user",
-        "installPath": "/Users/mpelos/.claude/plugins/cache/context-mode/context-mode/1.0.169",
-        "version": "1.0.169",
-        "installedAt": "2026-09-17T16:26:09.707Z",
-        "lastUpdated": "2026-09-17T16:29:04.401Z",
-        "gitCommitSha": "8853c3cedae76b5c3325b41fb363c1cd8cf7fbca"
-      }
-    ],
     "typescript-lsp@claude-plugins-official": [
       {
         "scope": "user",
@@ -93,8 +83,5 @@
         "lastUpdated": "2026-09-17T16:29:30.608Z"
       }
     ]
-  },
-  "enabledPlugins": {
-    "context-mode@context-mode": true
   }
 }

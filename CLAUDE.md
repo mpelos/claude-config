@@ -175,7 +175,3 @@ can continue it. That single fact dictates the topology below.
 - Scouts exist for three jobs only: the bridge above, read-only exploration fan-out,
   and verification — never implementation. Stop exploration Scouts (TaskStop) as soon
   as their report is processed; the bridge is the one Scout that stays.
-- **Verification never runs in the main conversation.** Every test run, typecheck and
-  browser check goes through the `verificador` subagent (`~/.claude/agents/`), which
-  returns only the verdict and the failures. Raw output belongs in its context, not
-  mine.
