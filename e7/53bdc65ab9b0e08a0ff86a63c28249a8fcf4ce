@@ -1,0 +1,21 @@
+plugins/installed_plugins.json
+  s_4fd6d69cbf994a::t_80829ba33d24d3 87
+settings.json
+  s_4fd6d69cbf994a::t_deb0b9dd190e3d 15,75-79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e753bdc65ab9b0e08a0ff86a63c28249a8fcf4ce",
+  "prompts": {},
+  "sessions": {
+    "s_4fd6d69cbf994a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0d462124-4aa0-4f0a-a1f0-8b14370e7f39",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marcelo Pélos <mpelos@gmail.com>"
+    }
+  }
+}
