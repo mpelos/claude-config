@@ -12,19 +12,7 @@
     "deny": [],
     "defaultMode": "auto"
   },
-  "model": "fable",
   "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/mpelos/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
-          }
-        ]
-      }
-    ],
     "PreToolUse": [
       {
         "matcher": "Bash",
@@ -32,15 +20,6 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/block-git-push.sh"
-          }
-        ]
-      },
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/mpelos/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
           }
         ]
       }
