@@ -22,11 +22,11 @@ is the worst possible one, and is treated as sabotage.
 The single source of truth for model ids. Prose in this file refers to models ONLY by
 their identifier, so swapping a model means editing only this table.
 
-| identifier     | model id       | role                                                                                           |
-| -------------- | -------------- | ---------------------------------------------------------------------------------------------- |
-| **Partner**    | gpt-6-astra    | pair-programming partner via codex MCP: majority of implementation, planning, cross-review     |
-| **Scout**      | opus-5         | subagents via the Agent tool (`model: 'opus'`): read-only exploration, and the Partner bridge  |
-| **Specialist** | claude-fable-5 | extremely expensive top-tier model. ONLY I choose to use it, by launching a session on it for very complex work. Never spawn it as a subagent or inside workflows, never route work to it on your own judgement |
+| identifier     | model id         | role                                                                                           |
+| -------------- | ---------------- | ---------------------------------------------------------------------------------------------- |
+| **Partner**    | gpt-6.1-sol      | pair-programming partner via `codex exec`: majority of implementation, planning, cross-review  |
+| **Scout**      | claude-opus-5-5  | subagents via the Agent tool (`model: 'opus'`): read-only exploration and verification         |
+| **Specialist** | claude-fable-5-1 | extremely expensive top-tier model. ONLY I choose to use it, by launching a session on it for very complex work. Never spawn it as a subagent or inside workflows, never route work to it on your own judgement |
 
 "You" in this file is whichever model I launched the session with — usually Scout's
 model, the Specialist when the problem demands it. The process is identical either way.
@@ -101,9 +101,9 @@ So NOTHING lands without passing through the thread — the only question is whi
 and none of the three ever puts you on hold:
 
 - **Notify (after)** — simple and local: known cause, obvious fix, no structural
-  footprint. Do it yourself, then fire the diff plus a one-paragraph rationale through
-  the bridge and KEEP WORKING — the bridge is async, so the notification costs zero
-  wall-clock. His comment arrives while you're on the next thing; act on it if it says
+  footprint. Do it yourself, then send the diff plus a one-paragraph rationale to the
+  thread in the background and KEEP WORKING — the send is async, so the notification
+  costs zero wall-clock. His comment arrives while you're on the next thing; act on it if it says
   something, and either way he stayed current.
 - **Spar (before)** — anything that starts with an investigation ("why is this
   happening?") or ends in structure: public contracts, schemas, module boundaries, new
@@ -137,41 +137,76 @@ takes over — say so, don't retry.
 
 ## Mechanics
 
-The Partner is reached through the **codex MCP server** (`mcp__codex__codex` to open a
-thread, `mcp__codex__codex-reply` to continue one) — never the `codex exec` /
-`codex review` CLI. Codex threads are per-process: only the process that opened a thread
-can continue it. That single fact dictates the topology below.
+The Partner is reached ONLY through the `codex exec` CLI, run by you through Bash. Never
+the codex MCP server (`codex mcp-server` no longer exists since Codex 0.154) and never the
+Codex plugin for Claude Code (`/codex:*` commands, the `codex:codex-rescue` subagent): the
+plugin can only continue the latest task, not a named thread.
 
-- **A persistent bridge owns the project thread** (§0). Codex MCP servers are
-  per-process and EVERY agent — the session, each subagent — gets its own instance:
-  whoever opens a thread is the only one who can ever continue it ("Session not found"
-  otherwise; verified 2026-08-12). A thread opened by the session itself can therefore
-  only be continued by blocking the session — so the opener must be the bridge: one
-  long-lived background Scout that opens the thread with the onboarding briefing as its
-  first prompt, carrying `model` (from the table), `sandbox: 'danger-full-access'`,
-  `approval-policy: 'never'`, and `config: {"model_reasoning_effort": "high"}` — all
-  fixed for the project. It surfaces the threadId immediately (report it to me before
-  the first real task, for `codex resume <threadId>` / `~/.codex/sessions/`) and holds
-  the thread for the whole project. ALL exchanges — spars, delegated stories, notify
-  digests — go through the bridge via SendMessage, which is async and is what keeps you
-  pipelining instead of blocking. The bridge relays payloads verbatim, reports replies
-  verbatim, thinks nothing, and is never stopped while the project runs. The thread is
-  ONE conversation: never two sends in flight at once — serialize.
-- **One send buys exactly one reply.** A payload is delivered between turns and answered
-  once, so "implement A, report, then B, then C" collapses into one batched answer with
-  A, B and C already written — you review five stages at once, which is what staging was
-  supposed to prevent, and nothing you learn from A can reach B. Multi-stage work is
-  therefore ONE SEND PER STAGE: relay stage N, read it, review the diff, then send N+1.
-  The bridge should refuse a payload that asks for staged reports in a single send.
-- **If the bridge dies, the MCP connection drops, or the thread is lost** ("Session not
-  found"): tell me, then spawn a new bridge whose fresh thread is reseeded from the
-  milestone doc plus a new briefing — never silently reroute the Partner's work to a
-  Claude model.
-- **Cold reviews** (the named exception above) use a fresh thread with one pass and no
-  follow-ups, so they need no bridge: call the MCP directly and accept the blocking wait.
+A thread lives on disk (`~/.codex/sessions/`) and ANY process continues it by its
+threadId, so you own the project thread directly — no bridge agent.
+
+### The two commands
+
+Always run from the project root. Every prompt goes in a file, piped on stdin (`-`), so
+quoting never breaks it. Exchange files live in `tmp/codex/` (git-ignored; add the
+ignore if the project lacks it). `-m` is the Partner's model id from the table; pass the
+same flags on every call, resume included.
+
+The reasoning effort is `high`, always. Never raise it to `xhigh` on your own judgement,
+not even for work that feels important or hard: `xhigh` does not necessarily give better
+results, sometimes gives worse ones, and costs more. Only use different effort the the
+user asks for it.
+
+Open the project thread (step zero, and cold reviews):
+
+```bash
+codex exec --json -m gpt-6-astra -c model_reasoning_effort=high \
+  --dangerously-bypass-approvals-and-sandbox \
+  -o tmp/codex/reply.md - < tmp/codex/send.md \
+  > tmp/codex/events.jsonl 2> tmp/codex/stderr.log
+```
+
+Continue it:
+
+```bash
+codex exec resume --json -m gpt-6-astra -c model_reasoning_effort=high \
+  --dangerously-bypass-approvals-and-sandbox \
+  -o tmp/codex/reply.md <threadId> - < tmp/codex/send.md \
+  > tmp/codex/events.jsonl 2> tmp/codex/stderr.log
+```
+
+- **The threadId** is in the first event: `head -1 tmp/codex/events.jsonl` prints
+  `{"type":"thread.started","thread_id":"..."}`. Report it to me, and write it at the
+  top of the milestone doc (§1) so it survives a context compaction. Never use
+  `resume --last`: another session's thread may be the newest.
+- **The reply** is the Partner's final message, in `tmp/codex/reply.md`. Read that, not
+  the event stream. `events.jsonl` holds the commands he ran, if you need them.
+- **Errors:** a non-zero exit is a failed send; read `stderr.log`. With exit 0, stderr
+  noise from Codex's own MCP servers (e.g. `insufficient_scope`) is harmless.
+
+### How a send runs
+
+- **Always in the background.** Run the command with Bash `run_in_background: true` and
+  keep working; you are notified when it exits, then read the reply. Rounds take 10–40
+  min, past the foreground limit — never block on one, never poll.
+- **One send in flight per thread.** The thread is ONE conversation: wait for a send's
+  exit before the next one. Write each `send.md` fresh; never append to the last one.
+- **One send buys exactly one reply.** A send is answered once, so "implement A,
+  report, then B, then C" collapses into one batched answer with A, B and C already
+  written — you review five stages at once, which is what staging was supposed to
+  prevent, and nothing you learn from A can reach B. Multi-stage work is therefore ONE
+  SEND PER STAGE: send stage N, read it, review the diff, then send N+1.
+- **If a send fails or the thread is lost:** tell me, then open a fresh thread reseeded
+  from the milestone doc plus a new briefing — never silently reroute the Partner's work
+  to a Claude model.
+- **Cold reviews** (the named exception above) open a fresh thread with the first
+  command, one pass, no follow-ups; its threadId is never reused.
+
+### The workspace
+
 - The Partner works on the shared checkout on main. No worktrees or branches unless I
   ask — and once I have asked for one, it stays the project's workspace until I say
   otherwise. One pen per file at a time: if stories could overlap, serialize them.
-- Scouts exist for three jobs only: the bridge above, read-only exploration fan-out,
-  and verification — never implementation. Stop exploration Scouts (TaskStop) as soon
-  as their report is processed; the bridge is the one Scout that stays.
+- Scouts exist for two jobs only: read-only exploration fan-out and verification —
+  never implementation, never the Partner's channel. Stop them (TaskStop) as soon as
+  their report is processed.
