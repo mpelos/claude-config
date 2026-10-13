@@ -24,7 +24,8 @@ their identifier, so swapping a model means editing only this table.
 
 | identifier     | model id         | role                                                                                           |
 | -------------- | ---------------- | ---------------------------------------------------------------------------------------------- |
-| **Partner**    | gpt-6.1-sol      | pair-programming partner via `codex exec`: majority of implementation, planning, cross-review  |
+| **Default Partner**    | gpt-6.1-sol      | pair-programming partner via `codex exec`: majority of implementation, planning, cross-review  |
+| **Specialist Partner** | gpt-6-astra      | ONLY when I explicitly ask for it, by name, in a given task. Never pick it on your own judgement, never substitute it for the Default Partner, never use it for cold reviews unless I say so |
 | **Scout**      | claude-opus-5-5  | subagents via the Agent tool (`model: 'opus'`): read-only exploration and verification         |
 | **Specialist** | claude-fable-5-1 | extremely expensive top-tier model. ONLY I choose to use it, by launching a session on it for very complex work. Never spawn it as a subagent or inside workflows, never route work to it on your own judgement |
 
