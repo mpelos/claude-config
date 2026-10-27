@@ -78,9 +78,26 @@ runs out, the other covers — tell me.
 
 ## Mechanics
 
-Reach the Partner only through `codex exec` — not the codex MCP server, not the Codex
-plugin. Reasoning effort is always `high`, never `xhigh` unless I ask. Exchange files go
-in `tmp/codex/`, git-ignored.
+Inside T3 Code the Partner is a T3 child thread; outside it, a `codex exec` thread.
+Inside T3, `mcp__t3-code__*` tools are in your tool list, usually deferred — load them
+with ToolSearch. If a ToolSearch finds none, you're outside T3. Never use the `codex` MCP
+server or the Codex plugin. Reasoning effort is `high` unless I ask
+otherwise; always pass it explicitly, since the defaults are lower.
+
+### Inside T3
+
+- **Open:** `delegate_task` with `target: {providerInstanceId: "codex", model: <model id>,
+  options: {reasoningEffort: "high"}}`. The returned `childThreadId` is the Partner's
+  threadId.
+- **Continue:** `t3_thread_send` to that `childThreadId`. T3's own guidance is a fresh
+  `delegate_task` per review round; we keep one thread on purpose, because the Partner's
+  value is the context it accumulates.
+- **Cold review:** a new `delegate_task`, never continued.
+- Completion arrives as a notification — don't poll. `t3_thread_read` has the full reply.
+
+### Outside T3
+
+Exchange files go in `tmp/codex/`, git-ignored. Always run in the background, never poll.
 
 Open a thread:
 
@@ -103,7 +120,9 @@ codex exec resume --json -m <model> -c model_reasoning_effort=high \
 - The threadId is in the first line of `events.jsonl`. Never `resume --last`; another
   session's thread may be newer.
 - With exit 0, MCP errors in `stderr.log` are harmless.
-- Always run in the background, never poll.
+
+### Every send
+
 - One send in flight per thread, one stage per send — a send gets one reply, so batched
   stages come back already done.
 - A review send names the git range, never your summary of it, plus proof the slice
