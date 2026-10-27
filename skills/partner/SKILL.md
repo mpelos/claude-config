@@ -50,10 +50,8 @@ Specialist when the problem demands it. The process is identical either way.
 Known asymmetries that shape it: you write the better code — naming, structure, APIs,
 UI, and code that stays organized — so the pen is yours. The Partner is extremely
 capable on hard logic and at finding what is wrong: the stronger reviewer, and a reviewer
-who did not write the code sees what the author cannot. His runs are slow (10–40 min per
-round), which suits review: it runs in the background while you keep writing. His code
-comes out less organized than yours, so he writes only when §2 says so. Never use Haiku
-or Sonnet.
+who did not write the code sees what the author cannot. His code comes out less organized
+than yours, so he writes only when §2 says so. Never use Haiku or Sonnet.
 
 ## The process: pair programming with you at the keyboard
 
