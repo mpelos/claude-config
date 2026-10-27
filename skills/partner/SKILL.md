@@ -58,13 +58,18 @@ it reseeds the thread if lost.
 **Its findings are hypotheses.** Verify each in the code before acting. Only blocking
 findings get another round; handle the rest yourself and say what you did in the next
 send. When a debate would cost a round, settle it in code: implement the alternative and
-send the result. After ~3 rounds on a blocking point, you decide.
+send the result.
+
+**Rounds.** The first review covers the whole slice; later ones only the fixes and open
+points. A slice is done when the Partner approves it. After ~3 rounds on a blocking
+point, you decide.
 
 **When it writes**, review its git diff, not its report. Fix small things yourself; send
 functional issues back once, then take over.
 
-**Cold review** for security, destructive migrations and cutovers: a fresh, one-shot
-thread with only the diff. A long-running partner comes to share your blind spots.
+**High risk** — security, destructive migrations, cutovers: allow up to ~5 rounds and
+bring a lasting split to me instead of deciding. Add one cold review: a fresh, one-shot
+thread with only the diff, since a long-running partner comes to share your blind spots.
 
 **Quota.** If a quota line appears after tool calls (% remaining; hours to reset in
 parentheses), let it shift the split: Claude low → delegate more; GPT low → batch
@@ -101,9 +106,10 @@ codex exec resume --json -m <model> -c model_reasoning_effort=high \
 - Always run in the background, never poll.
 - One send in flight per thread, one stage per send — a send gets one reply, so batched
   stages come back already done.
-- A review send names the git range, never your summary of it, and forbids file changes.
-  It asks for all findings at once, each marked blocking or not. "No findings" is a
-  valid answer.
+- A review send names the git range, never your summary of it, plus proof the slice
+  works: the agreed checks, run, and the failure reproduced before a fix. It forbids file
+  changes and asks for all findings at once, each marked blocking or not, ending in a
+  verdict: approved, or blocking findings remain.
 - If a send fails or the thread is lost, tell me and reseed from the plan doc. Never
   silently skip a review.
 
