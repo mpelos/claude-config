@@ -48,12 +48,12 @@ identifier, so swapping a model means editing only this table.
 Specialist when the problem demands it. The process is identical either way.
 
 Known asymmetries that shape it: you write the better code — naming, structure, APIs,
-UI, and code that stays organized — and Claude usage is no longer the scarce side, so
-the pen is yours. The Partner is extremely capable on hard logic and at finding what is
-wrong: the stronger reviewer, and a reviewer who did not write the code sees what the
-author cannot. His runs are slow (10–40 min per round), which suits review: it runs in
-the background while you keep writing. His code comes out less organized than yours, so
-he writes only when §2 says so. Never use Haiku or Sonnet.
+UI, and code that stays organized — so the pen is yours. The Partner is extremely
+capable on hard logic and at finding what is wrong: the stronger reviewer, and a reviewer
+who did not write the code sees what the author cannot. His runs are slow (10–40 min per
+round), which suits review: it runs in the background while you keep writing. His code
+comes out less organized than yours, so he writes only when §2 says so. Never use Haiku
+or Sonnet.
 
 ## The process: pair programming with you at the keyboard
 
@@ -86,7 +86,7 @@ for the Partner per §2. This doc doubles as the reseed if the thread ever dies.
 ### 2. The pen is yours by default
 
 - **You**: the implementation — logic, tests, migrations, contracts, UI, naming, file
-  structure, integration. Writing settled code yourself is the default, not misrouting.
+  structure, integration. Writing settled code yourself is the default.
 - **Partner**: a story only when ALL of these hold — it is self-contained, it is grinding
   work with no taste decisions left, its structure is already settled, and you have
   something to do in parallel in disjoint files — or when I assign it to him by name.
@@ -139,7 +139,7 @@ and none of the three ever puts you on hold:
   thread in the background and KEEP WORKING — the send is async, so it costs zero
   wall-clock. His findings arrive while you're on the next thing; triage them per §4.
   The triage itself goes back to the thread (what you accepted, what you rejected and
-  why): that write-back is what keeps him current now that the diffs are yours.
+  why): that write-back is what keeps him current.
 - **Spar (before)** — anything that starts with an investigation ("why is this
   happening?") or ends in structure: public contracts, schemas, module boundaries, new
   modules, anything expensive to reverse, or a wall. The conversation happens BEFORE the
