@@ -184,3 +184,16 @@ step that felt clerical — the cast after the design was settled, the copy stri
 fixture constant — because the work felt done and the rest felt like typing. Treat "this
 part is routine" as the signal to slow down, and say in your report which parts you
 considered routine, so the review can aim there.
+
+### Three specifics the rules above do not reach
+
+- **Removing a symbol is a whole-tree question.** Before deleting a parameter, field or
+  function, `grep -rn` the whole repo for its call sites AND its readers — never only the
+  directory where it lives. A logger or a cause-chain walker reads things nothing nearby
+  mentions.
+- **Gates run before an edit no longer describe the tree.** The order is edit → gates →
+  commit, and an edit that only removes something invalidates them too. Call a commit
+  verified only if the gates ran after its last edit.
+- **A premise you have not read enters a delegation brief as a question, never as a fact.**
+  "Verify X and stop if it is false", not "X holds". A brief is where an unverified claim
+  of yours becomes someone else's foundation.
