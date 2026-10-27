@@ -27,9 +27,10 @@ Never use Haiku or Sonnet.
 ## Roles
 
 You drive: you write the code. The Partner navigates: it shapes the plan with you and
-reviews what you write — not having written it, it sees what you can't. Its job is
-finding the best path, not approving yours; if it agrees with everything, ask what it
-would do differently.
+reviews what you write. It did not write your checks, so it is the only thing in the
+loop that can notice a check built to confirm rather than to fail. Its job is finding the
+best path, not approving yours; if it agrees with everything, ask what it would do
+differently.
 
 It is one persistent thread for the whole project, so it accumulates context instead of
 starting cold. Each round costs 10–40 min while code is cheap for you, so spend rounds
@@ -126,9 +127,20 @@ codex exec resume --json -m <model> -c model_reasoning_effort=high \
 - One send in flight per thread, one stage per send — a send gets one reply, so batched
   stages come back already done.
 - A review send names the git range, never your summary of it, plus proof the slice
-  works: the agreed checks, run, and the failure reproduced before a fix. It forbids file
+  works: the agreed checks, run; the failure reproduced before a fix; and, for each new
+  test, the mutation that made it fail and which test failed. Gate output goes in as
+  output — exit codes and failure names — never your assessment of it. It forbids file
   changes and asks for all findings at once, each marked blocking or not, ending in a
   verdict: approved, or blocking findings remain.
+- The send also asks for a claim audit: every factual claim in the diff's comments and in
+  the commit message — about another module, a library, the platform, a third party or a
+  measurement — marked verifiable-from-the-diff or not, with the not-verifiable ones
+  checked at the source. And one question, always: name any claim here that is stronger
+  than the evidence attached to it.
+- The review may re-run the red with a mutation of the Partner's choosing. It shares the
+  checkout: one edit, one test run, revert. A mutation chosen by whoever did not write the
+  test is the strongest check available — if its red and yours disagree, the test protects
+  one thing and claims another.
 - If a send fails or the thread is lost, tell me and reseed from the plan doc. Never
   silently skip a review.
 
