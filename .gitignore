@@ -27,6 +27,9 @@
 # ids, and the bundled Office skills are proprietary Anthropic material whose
 # license forbids retaining or distributing copies outside the service.
 skills/synced/
+# skills/.trash/ holds old buckets of that same cache that were moved out of
+# synced/ and never deleted, so the same reasons apply.
+skills/.trash/
 !hooks/
 !hooks/**
 !output-styles/
