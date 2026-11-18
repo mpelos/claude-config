@@ -17,8 +17,8 @@ disable-model-invocation: true
 
 | identifier             | model id         | use                                                    |
 | ---------------------- | ---------------- | ------------------------------------------------------ |
-| **Default Partner**    | gpt-6.1-sol      | the Partner, unless I name another                     |
-| **Specialist Partner** | gpt-6-astra      | only when I name it                                    |
+| **Default Partner**    | gpt-6.2-sol      | the Partner, unless I name another                     |
+| **Specialist Partner** | gpt-6.2-astra    | only when I name it                                    |
 | **Scout**              | claude-opus-5-5  | subagents (`model: 'opus'`): read-only exploration and verification |
 | **Specialist**         | claude-fable-5-1 | never spawn it                                         |
 
